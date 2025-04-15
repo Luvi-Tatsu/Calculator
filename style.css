@@ -1,7 +1,37 @@
 *{margin: 0; padding: 0;}
 
+body{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #container{
-    height: 300px;
-    width:  300px;
+    margin-top: 128px;
+    height: 400px;
+    width: 400px;
+    flex-direction: column;
+    display: flex;
     border: solid black 1px;
+}
+
+button{
+    width: 100px;
+}
+.inputArea{
+    width: 400px;
+    height: 80px;
+    background-color: gray;
+}
+
+.btnCon{
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 320px;
+   
+}
+
+.zero{
+    width: 200px;
 }
