@@ -12,34 +12,41 @@
 let firstNumber = "";
 let secondNumber = "";
 let operator = 0;
+let dote = 0;
 
 
 const inputArea = document.querySelector(".inputArea")
 const aC = document.querySelector(".aC");
 aC.addEventListener("click",function (){
-    inputArea.textContent = "";
+inputArea.textContent = "";
+firstNumber = "";
+secondNumber = "";
+ operator = 0;
+ dote = 0;
+
 })
 
 const changeOp = document.querySelector(".changeOp");
 changeOp.addEventListener("click",function (){
     if(inputArea === Math.sign()){
-    inputArea.textContent = Math.sign(-"");}
+    inputArea.textContent = Math.sign("-");}
 })
 
 const percentile = document.querySelector(".percentile");
 percentile.addEventListener("click",function (){
-     inputArea.textContent += "%";
+     inputArea.textContent = "%";
      operator = 1;
 })
 
 const dev = document.querySelector(".dev");
 dev.addEventListener("click",function (){
-     inputArea.textContent += "/";
+     inputArea.textContent = "/";
      operator = 2;
 })
 
 const seven = document.querySelector(".seven");
 seven.addEventListener("click",function (){
+     
      inputArea.textContent += "7";
      if(operator === 0){
      firstNumber += "7";}
@@ -127,11 +134,36 @@ zero.addEventListener("click",function (){
 const dot = document.querySelector(".dot");
 dot.addEventListener("click",function (){
      inputArea.textContent += ".";
-     if(operator === 0){
+     if(operator === 0 ){
      firstNumber += ".";}
-     else {secondNumber += ".";}
+      else{secondNumber += ".";}
 })
 const equals = document.querySelector(".equals");
 equals.addEventListener("click",function (){
-     inputArea.textContent += "";
+     if(operator === 4){
+          firstNumber = parseInt(firstNumber);
+          secondNumber = parseInt(secondNumber);
+          let total = firstNumber - secondNumber;
+     inputArea.textContent = `${total}`}
+     else if(operator === 5){
+          firstNumber = parseInt(firstNumber);
+          secondNumber = parseInt(secondNumber);
+          let total = firstNumber + secondNumber;
+     inputArea.textContent = `${total}`}
+     else if(operator === 3){
+          firstNumber = parseInt(firstNumber);
+          secondNumber = parseInt(secondNumber);
+          let total = firstNumber * secondNumber;
+     inputArea.textContent = `${total}`}
+     else if(operator === 2){
+          firstNumber = parseInt(firstNumber);
+          secondNumber = parseInt(secondNumber);
+          let total = firstNumber / secondNumber;
+     inputArea.textContent = `${total}`}
+     else if(operator === 1){
+          firstNumber = parseInt(firstNumber);
+          secondNumber = parseInt(secondNumber);
+          let total = firstNumber % secondNumber;
+     inputArea.textContent = `${total}`}
+
 })
