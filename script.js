@@ -34,13 +34,13 @@ changeOp.addEventListener("click",function (){
 
 const percentile = document.querySelector(".percentile");
 percentile.addEventListener("click",function (){
-     inputArea.textContent = "%";
+     inputArea.textContent = "";
      operator = 1;
 })
 
 const dev = document.querySelector(".dev");
 dev.addEventListener("click",function (){
-     inputArea.textContent = "/";
+     inputArea.textContent = "";
      operator = 2;
 })
 
@@ -69,7 +69,7 @@ nine.addEventListener("click",function (){
 })
 const mul = document.querySelector(".mul");
 mul.addEventListener("click",function (){
-     inputArea.textContent = "*";
+     inputArea.textContent = "";
      operator = 3;
 })
 const four = document.querySelector(".four");
@@ -95,7 +95,7 @@ six.addEventListener("click",function (){
 })
 const sub = document.querySelector(".sub");
 sub.addEventListener("click",function (){
-     inputArea.textContent = "-";
+     inputArea.textContent = "";
      operator = 4;
 })
 const one = document.querySelector(".one");
@@ -121,7 +121,7 @@ three.addEventListener("click",function (){
 })
 const add = document.querySelector(".add");
 add.addEventListener("click",function (){
-     inputArea.textContent = "+";
+     inputArea.textContent = "";
      operator = 5;
 })
 const zero = document.querySelector(".zero");
