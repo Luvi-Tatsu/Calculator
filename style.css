@@ -22,6 +22,9 @@ button{
     width: 400px;
     height: 80px;
     background-color: gray;
+    text-align: end;
+    font-size: 80px;
+
 }
 
 .btnCon{
