@@ -24,6 +24,9 @@ button{
     background-color: gray;
     text-align: end;
     font-size: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
 }
 

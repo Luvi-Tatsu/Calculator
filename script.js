@@ -4,7 +4,15 @@ let secondNumber = "";
 let operator = 0;
 let dote = 0;
 let total = 0;
-const inputArea = document.querySelector(".inputArea")
+let displayValue = "";
+const inputArea = document.getElementById("inputArea");
+ 
+// function display (){
+//      inputArea.innerText = displayValue;
+//      if (displayValue.length > 9){
+//           inputArea.innerText = displayValue.substring(0,9);}}
+// display();
+
 const aC = document.querySelector(".aC");
 aC.addEventListener("click",function (){
 inputArea.textContent = "";
@@ -98,43 +106,12 @@ dot.addEventListener("click",function (){
 
 const equals = document.querySelector(".equals");
 equals.addEventListener("click",function (){
-     // if(operator === 4){
-     // firstNumber = parseInt(firstNumber);
-     // secondNumber = parseInt(secondNumber);
-     // let total = firstNumber - secondNumber;
-     // inputArea.textContent = `${total}`}
-
-     // else if(operator === 5){
-     // firstNumber = parseInt(firstNumber);
-     // secondNumber = parseInt(secondNumber);
-     // let total = firstNumber + secondNumber;
-     // inputArea.textContent = `${total}`}
-
-     // else if(operator === 3){
-     // firstNumber = parseInt(firstNumber);
-     // secondNumber = parseInt(secondNumber);
-     // let total = firstNumber * secondNumber;
-     // inputArea.textContent = `${total}`}
-
-     // else if(operator === 2){
-     // firstNumber = parseInt(firstNumber);
-     // secondNumber = parseInt(secondNumber);
-     // let total = firstNumber / secondNumber;
-     // inputArea.textContent = `${total}`}
-
-     // else if(operator === 1){
-     // firstNumber = parseInt(firstNumber);
-     // secondNumber = parseInt(secondNumber);
-     // let total = firstNumber % secondNumber;
-     // inputArea.textContent = `${total}`}
-     operand(firstNumber, secondNumber);
-})
+     operand(firstNumber, secondNumber);})
 
 const percentile = document.querySelector(".percentile");
 percentile.addEventListener("click",function (){
-     if(operator === 0){
      inputArea.textContent += " % ";
-     operator = 1;}
+     if(operator === 0){operator = 1;}
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 1;
@@ -142,9 +119,8 @@ percentile.addEventListener("click",function (){
 
 const dev = document.querySelector(".dev");
 dev.addEventListener("click",function (){
-     if(operator === 0){
      inputArea.textContent += " / ";
-     operator = 2;}
+     if(operator === 0){operator = 2;}
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 2;
@@ -152,9 +128,8 @@ dev.addEventListener("click",function (){
 
 const mul = document.querySelector(".mul");
 mul.addEventListener("click",function (){
-     if(operator === 0){
-     inputArea.textContent += " * ";
-     operator = 3;}
+     inputArea.textContent += " * "; 
+     if(operator === 0){operator = 3;}
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 3;
@@ -162,9 +137,8 @@ mul.addEventListener("click",function (){
 
 const sub = document.querySelector(".sub");
 sub.addEventListener("click",function (){
-     if(operator === 0){
-     inputArea.textContent += " - ";
-     operator = 4;}
+     inputArea.textContent += " + ";
+     if(operator === 0){operator = 4;}
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 4;
@@ -174,13 +148,13 @@ sub.addEventListener("click",function (){
 
 const add = document.querySelector(".add");
 add.addEventListener("click",function (){
-     if(operator === 0){
      inputArea.textContent += " + ";
-     operator = 5;}
+     if(operator === 0){operator = 5;}
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 5;
           inputArea.textContent += " + ";}})
+          
 
 
 function operand(){
