@@ -7,3 +7,4 @@ dot still has a bug //fixed
 error when  you add more in total //fixed
 cannot implement all extra credit either. 
 no keyboard support 
+fixed bugs I saw upon changes
