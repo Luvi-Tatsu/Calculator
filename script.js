@@ -102,8 +102,8 @@ zero.addEventListener("click",function (){
 const dot = document.querySelector(".dot");
 dot.addEventListener("click",function (){ 
      if(!firstNumber.includes(".") && operator === 0){
-          firstNumber += "."; inputArea.textContent += ".";}
-      else if(!secondNumber.includes(".") && operator != 0){secondNumber += "."; inputArea.textContent += "."}})
+     firstNumber += "."; inputArea.textContent += ".";}
+     if(!secondNumber.includes(".") && operator != 0){secondNumber += "."; inputArea.textContent += "."}})
 
 const equals = document.querySelector(".equals");
 equals.addEventListener("click",function (){
@@ -165,45 +165,45 @@ function operand(){
            secondNumber = parseFloat(secondNumber);
           total = firstNumber + secondNumber;
           firstNumber = total;
-          secondNumber = 0;
+          secondNumber = "";
           inputArea.textContent = `${total}`
           console.log(firstNumber);}
 
      
           else if(operator === 4){
           operator = 0;     
-          firstNumber = parseInt(firstNumber);
-          secondNumber = parseInt(secondNumber);
+          firstNumber = parseFloat(firstNumber);
+           secondNumber = parseFloat(secondNumber);
           let total = firstNumber - secondNumber;
           firstNumber = total;
-          secondNumber = 0;
+          secondNumber = "";
           inputArea.textContent = `${total}`}
      
           else if(operator === 3){
           operator = 0;          
-          firstNumber = parseInt(firstNumber);
-          secondNumber = parseInt(secondNumber);
+          firstNumber = parseFloat(firstNumber);
+           secondNumber = parseFloat(secondNumber);
           let total = firstNumber * secondNumber;
           firstNumber = total;
-          secondNumber = 0;
+          secondNumber = "";
           inputArea.textContent = `${total}`}
      
           else if(operator === 2){
           operator = 0;
-          firstNumber = parseInt(firstNumber);
-          secondNumber = parseInt(secondNumber);
+          firstNumber = parseFloat(firstNumber);
+          secondNumber = parseFloat(secondNumber);
           let total = firstNumber / secondNumber;
           firstNumber = total;
-          secondNumber = 0;
+          secondNumber = "";
           inputArea.textContent = `${total}`}
      
           else if(operator === 1){
           operator = 0;
-          firstNumber = parseInt(firstNumber);
-          secondNumber = parseInt(secondNumber);
+          firstNumber = parseFloat(firstNumber);
+           secondNumber = parseFloat(secondNumber);
           let total = firstNumber % secondNumber;
           firstNumber = total;
-          secondNumber = 0;
+          secondNumber = "";
           inputArea.textContent = `${total}`}
 }
 
