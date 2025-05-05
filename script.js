@@ -182,8 +182,6 @@ sub.addEventListener("click",function (){
 const add = document.querySelector(".add");
 add.addEventListener("click",function (){
      inputArea.textContent = " + ";
-     console.log(firstNumber);
-     console.log(secondNumber);
      if(operator === 0){operator = 5;}
      if(operator != 0 && secondNumber != ""){
           operator = 5;
