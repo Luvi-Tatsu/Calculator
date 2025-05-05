@@ -31,7 +31,7 @@ changeOp.addEventListener("click",function (){
 const seven = document.querySelector(".seven");
 seven.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "7";}
      else{inputArea.textContent += "7";}
      if(operator === 0){
@@ -41,7 +41,7 @@ seven.addEventListener("click",function (){
 const eight = document.querySelector(".eight");
 eight.addEventListener("click",function (){ 
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "8";}
      else{inputArea.textContent += "8";}
      if(operator === 0){firstNumber += 8;}
@@ -50,7 +50,7 @@ eight.addEventListener("click",function (){
 const nine = document.querySelector(".nine");
 nine.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "9";}
      else{inputArea.textContent += "9";}
      if(operator === 0){
@@ -60,7 +60,7 @@ nine.addEventListener("click",function (){
 const four = document.querySelector(".four");
 four.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "4";}
      else{inputArea.textContent += "4";}
      if(operator === 0){
@@ -70,7 +70,7 @@ four.addEventListener("click",function (){
 const five = document.querySelector(".five");
 five.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "5";}
      else{inputArea.textContent += "5";}
      if(operator === 0 ){
@@ -80,7 +80,7 @@ five.addEventListener("click",function (){
 const six = document.querySelector(".six");
 six.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "6";}
      else{inputArea.textContent += "6";}
      if(operator === 0){
@@ -91,7 +91,7 @@ six.addEventListener("click",function (){
 const one = document.querySelector(".one");
 one.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "1";}
      else{inputArea.textContent += "1";}
      if(operator === 0){
@@ -101,7 +101,7 @@ one.addEventListener("click",function (){
 const two = document.querySelector(".two");
 two.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "2";}
      else{inputArea.textContent += "2";}
      if(operator === 0){
@@ -111,7 +111,7 @@ two.addEventListener("click",function (){
 const three = document.querySelector(".three");
 three.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "3";}
      else{inputArea.textContent += "3";}
      if(operator === 0){
@@ -121,7 +121,7 @@ three.addEventListener("click",function (){
 const zero = document.querySelector(".zero");
 zero.addEventListener("click",function (){
      let txt = inputArea.textContent;
-     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " )
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % " || total != 0)
           {inputArea.textContent = "0";}
      else{inputArea.textContent += "0";}
      if(operator === 0){
@@ -138,7 +138,10 @@ const dot = document.querySelector(".dot");
 
 const equals = document.querySelector(".equals");
 equals.addEventListener("click",function (){
-     operand(firstNumber, secondNumber);})
+     let txt = inputArea.textContent;
+     if(txt === " + " || txt === " - " || txt === " * " || txt === " / " ||txt === " % "){
+          inputArea.textContent = `${firstNumber}`
+     }else{operand(firstNumber, secondNumber);}})
 
 const percentile = document.querySelector(".percentile");
 percentile.addEventListener("click",function (){
@@ -147,7 +150,7 @@ percentile.addEventListener("click",function (){
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 1;
-          inputArea.textContent = " % ";}})
+          inputArea.textContent = `${total}`;}})
 
 const dev = document.querySelector(".dev");
 dev.addEventListener("click",function (){
@@ -156,7 +159,7 @@ dev.addEventListener("click",function (){
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 2;
-          inputArea.textContent = " / ";}})
+          inputArea.textContent = `${total}`;}})
 
 const mul = document.querySelector(".mul");
 mul.addEventListener("click",function (){
@@ -165,44 +168,47 @@ mul.addEventListener("click",function (){
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 3;
-          inputArea.textContent = " * ";}})
+          inputArea.textContent = `${total}`;}})
 
 const sub = document.querySelector(".sub");
 sub.addEventListener("click",function (){
-     inputArea.textContent = " + ";
+     inputArea.textContent = " - ";
      if(operator === 0){operator = 4;}
      if(operator != 0 && secondNumber != ""){
           operand(firstNumber, secondNumber);
           operator = 4;
-          inputArea.textContent = " - ";}})
-
-     
+          inputArea.textContent = `${total}`;}})
 
 const add = document.querySelector(".add");
 add.addEventListener("click",function (){
      inputArea.textContent = " + ";
+     console.log(firstNumber);
+     console.log(secondNumber);
      if(operator === 0){operator = 5;}
      if(operator != 0 && secondNumber != ""){
-          operand(firstNumber, secondNumber);
           operator = 5;
-          inputArea.textContent = " + ";}})
+          operand(firstNumber, secondNumber);
+          inputArea.textContent = `${total}`;}})
           
-
+const backSpace = document.querySelector(".backspace");
+backSpace.addEventListener("click",function (){
+inputArea.textContent = inputArea.textContent.substring(0,inputArea.textContent.length -1);
+if (operator === 0){firstNumber = firstNumber.substring(0,firstNumber.length -1);}
+else{secondNumber = secondNumber.substring(0,secondNumber.length -1);}
+})
 
 function operand(){
      if(operator === 5){
           operator = 0;
-           firstNumber = parseFloat(firstNumber);
-           secondNumber = parseFloat(secondNumber);
+          firstNumber = parseFloat(firstNumber);
+          secondNumber = parseFloat(secondNumber);
           total = firstNumber + secondNumber;
           total = Math.round(total*100)/100;
           firstNumber = `${total}`;
           secondNumber = "";
-          inputArea.textContent = `${total}`
-          console.log(firstNumber); console.log(secondNumber);}
+          inputArea.textContent = `${total}`;
+          }
           
-
-     
           else if(operator === 4){
           operator = 0;     
           firstNumber = parseFloat(firstNumber);
@@ -243,7 +249,6 @@ function operand(){
           secondNumber = "";
           inputArea.textContent = `${total}`}
 }
-
 
 
 
